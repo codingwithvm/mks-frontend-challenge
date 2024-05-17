@@ -16,7 +16,7 @@ export interface Product {
 }
 
 
-export default React.memo(({ setCartItems }: any) => {
+const Main = React.memo(({ setCartItems }: any) => {
     const [cartTotal, setCartTotal] = useState(0)
 
     const Products = () => {
@@ -105,3 +105,5 @@ export default React.memo(({ setCartItems }: any) => {
         </main>
     )
 })
+
+export default Main

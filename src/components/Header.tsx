@@ -9,7 +9,7 @@ interface HeaderProps {
     cartItems: Product[]
 }
 
-export default ({ toggleCart, cartItems }: HeaderProps) => {
+const Header = ({ toggleCart, cartItems }: HeaderProps) => {
     const [cartItemCount, setCartItemCount] = useState(0)
 
     useEffect(() => {
@@ -43,3 +43,5 @@ export default ({ toggleCart, cartItems }: HeaderProps) => {
         </header>
     )
 }
+
+export default Header

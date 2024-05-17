@@ -11,7 +11,7 @@ interface ShoppingCartProps {
     setCartItems: any
 }
 
-export default ({ isOpen, toggleCart, cartItems, cartTotal, setCartItems }: ShoppingCartProps) => {
+const ShoppingCart = ({ isOpen, toggleCart, cartItems, cartTotal, setCartItems }: ShoppingCartProps) => {
 
 
     const deleteProduct = (index: number)  => {
@@ -59,3 +59,5 @@ export default ({ isOpen, toggleCart, cartItems, cartTotal, setCartItems }: Shop
         </aside>
     )
 }
+
+export default ShoppingCart

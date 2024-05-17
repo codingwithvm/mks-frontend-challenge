@@ -1,7 +1,9 @@
 import styles from '@/styles/main.module.scss'
 
-export default () => {
+const Footer = () => {
     return (
         <footer className={styles.footer}>MKS sistemas © Todos os direitos reservados</footer>
     )
 }
+
+export default Footer
