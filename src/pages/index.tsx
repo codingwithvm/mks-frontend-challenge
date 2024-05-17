@@ -7,7 +7,7 @@ import ShoppingCart from "@/components/ShoppingCart"
 import { useEffect, useState } from "react"
 import { formattedPrice } from "@/utils/formattedPrice"
 
-export default () => {
+export default function index() {
     const queryClient = new QueryClient()
 
     const [isCartOpen, setIsCartOpen] = useState(false)

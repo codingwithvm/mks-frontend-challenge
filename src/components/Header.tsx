@@ -14,7 +14,6 @@ export default ({ toggleCart, cartItems }: HeaderProps) => {
 
     useEffect(() => {
         const num = cartItems.length
-        console.log(num)
         setCartItemCount(num)
     }, [cartItemCount])
 

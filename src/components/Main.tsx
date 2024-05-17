@@ -48,8 +48,6 @@ export default React.memo(({ setCartItems }: any) => {
         const handleAddToCart = (product: Product) => {
             data.products.map((item, index) => item.index = index)
 
-
-            console.log('comprando', product)
             setCartItems((item: any) => {
                 const newItems = [...item]
                 newItems.unshift(product)
