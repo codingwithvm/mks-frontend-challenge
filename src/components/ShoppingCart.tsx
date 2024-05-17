@@ -5,25 +5,25 @@ import { formattedPrice } from '@/utils/formattedPrice'
 
 interface ShoppingCartProps {
     isOpen: boolean
-    toggleCart: () => void
+    ToggleCart: () => void
     cartItems: Product[]
     cartTotal: number
-    setCartItems: any
+    SetCartItems: any
 }
 
-const ShoppingCart = ({ isOpen, toggleCart, cartItems, cartTotal, setCartItems }: ShoppingCartProps) => {
+const ShoppingCart = ({ isOpen, ToggleCart, cartItems, cartTotal, SetCartItems }: ShoppingCartProps) => {
 
 
     const deleteProduct = (index: number)  => {
         const productIndex = cartItems.findIndex(i => i.index === index)
-        setCartItems(cartItems.splice(productIndex, 1))
+        SetCartItems(cartItems.splice(productIndex, 1))
     }
 
     return (
         <aside className={`${styles.shoppingCart} ${isOpen ? styles.open : ''}`}>
             <div className={styles.shoppingCartHeader}>
                 <h1>Carrinho de compras</h1>
-                <button className={styles.closeButton} onClick={toggleCart}>
+                <button className={styles.closeButton} onClick={ToggleCart}>
                     X
                 </button>
             </div>

@@ -33,9 +33,9 @@ export default function index() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header toggleCart={() => setIsCartOpen(true)} cartItems={cartItems} />
-            <Main setCartItems={setCartItems} />
-            <ShoppingCart isOpen={cartOpen} toggleCart={toggleCart} cartItems={cartItems} cartTotal={cartTotal} setCartItems={setCartItems} />
+            <Header ToggleCart={() => setIsCartOpen(true)} cartItems={cartItems} />
+            <Main SetCartItems={setCartItems} />
+            <ShoppingCart isOpen={cartOpen} ToggleCart={toggleCart} cartItems={cartItems} cartTotal={cartTotal} SetCartItems={setCartItems} />
             <Footer />
         </QueryClientProvider>
     )

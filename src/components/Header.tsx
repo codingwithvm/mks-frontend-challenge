@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 import { Product } from './Main'
 
 interface HeaderProps {
-    toggleCart: () => void
+    ToggleCart: () => void
     cartItems: Product[]
 }
 
-const Header = ({ toggleCart, cartItems }: HeaderProps) => {
+const Header = ({ ToggleCart, cartItems }: HeaderProps) => {
     const [cartItemCount, setCartItemCount] = useState(0)
 
     useEffect(() => {
@@ -35,7 +35,7 @@ const Header = ({ toggleCart, cartItems }: HeaderProps) => {
                 initial={{ marginTop: -200, opacity: 0 }}
                 animate={{ marginTop: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                onClick={toggleCart}
+                onClick={ToggleCart}
             >
                 <Image alt='cart' src='/cart.png' width={19} height={18} />
                 <div>{cartItemCount}</div>
