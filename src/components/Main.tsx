@@ -17,8 +17,6 @@ export interface Product {
 
 
 const Main = React.memo(({ setCartItems }: any) => {
-    const [cartTotal, setCartTotal] = useState(0)
-
     const Products = () => {
         const { isPending, error, data } = useQuery<{ products: Product[] }>({
             queryKey: ['products'],
