@@ -10,12 +10,12 @@ import { formattedPrice } from "@/utils/formattedPrice"
 export default function index() {
     const queryClient = new QueryClient()
 
-    const [isCartOpen, setIsCartOpen] = useState(false)
+    const [cartOpen, setIsCartOpen] = useState(false)
     const [cartItems, setCartItems] = useState<Product[]>([])
     const [cartTotal, setCartTotal] = useState(0)
 
     const toggleCart = () => {
-        setIsCartOpen(!isCartOpen)
+        setIsCartOpen(!cartOpen)
     }
 
     useEffect(() => {
@@ -35,7 +35,7 @@ export default function index() {
             </Head>
             <Header toggleCart={() => setIsCartOpen(true)} cartItems={cartItems} />
             <Main setCartItems={setCartItems} />
-            <ShoppingCart isOpen={isCartOpen} toggleCart={toggleCart} cartItems={cartItems} cartTotal={cartTotal} setCartItems={setCartItems} />
+            <ShoppingCart isOpen={cartOpen} toggleCart={toggleCart} cartItems={cartItems} cartTotal={cartTotal} setCartItems={setCartItems} />
             <Footer />
         </QueryClientProvider>
     )
